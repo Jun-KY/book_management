@@ -30,7 +30,7 @@ public class AuthorRepository {
         return author;
     }
 
-    public Author author(Integer id, Author updatedAuthor){
+    public Author update(Integer id, Author updatedAuthor){
         if(!store.containsKey(id)){
             throw new NoSuchElementException("There is no Author for " + id);
         }
