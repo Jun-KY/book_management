@@ -25,7 +25,9 @@ public class BookService {
     }
 
     public Book update(Integer id, Book book){
-        return bookRepository.update(id, book);
+        getById(id);
+        book.setId(id);
+        return bookRepository.save( book);
     }
     public void delete(Integer id){
         bookRepository.delete(id);

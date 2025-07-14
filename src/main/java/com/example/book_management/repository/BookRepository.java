@@ -28,16 +28,16 @@ public class BookRepository {
         return book;
     }
 
-    public Book update(Integer id, Book updatedBook){
-        if (!store.containsKey(id)){
-            throw new NoSuchElementException("There is no " + id + "'s book" );
-        }
-
-        updatedBook.setId(id);
-        store.put(id, updatedBook);
-
-        return updatedBook;
-    }
+//    public Book update(Integer id, Book updatedBook){
+//        if (!store.containsKey(id)){
+//            throw new NoSuchElementException("There is no " + id + "'s book" );
+//        }
+//
+//        updatedBook.setId(id);
+//        store.put(id, updatedBook);
+//
+//        return updatedBook;
+//    }
 
     public void delete(Integer id){
         store.remove(id);
